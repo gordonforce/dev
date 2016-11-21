@@ -91,10 +91,8 @@ are equivalent to
 
 ```bash
 docker build -t gordonff/dev:debug --build-arg timezone="US/Pacific" .
-docker build -t gordonff/dev:latest --build-arg LOGIN="whale_hugger" 
+docker build -t gordonff/dev:latest --build-arg LOGIN="user" 
 ```
-NOTE: whale_hugger means Docker Fan
-
 **custom timezone and username for an east coast slacker**
 
 ```bash
@@ -103,6 +101,11 @@ docker build -t gordonff/dev:latest --build-arg LOGIN="dude"
 ```
 
 **most common use case envisioned for west coast bob**
+
+```bash
+docker build -t gordonff/dev:debug --build-arg timezone="US/Eastern" .
+docker build -t gordonff/dev:latest --build-arg LOGIN="dude" 
+```
 
 ```bash
 docker build -t gordonff/dev:latest --build-arg LOGIN="bob" 
