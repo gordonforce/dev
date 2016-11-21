@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b9e1609f-cfd1-4cfe-a918-4280e4f9755d" name="storage.local (project level)" url="http://storage.local">
+        <fileTransfer host="storage.local" port="22" privateKey="C:\Users\Gordon\.ssh\id_rsa.ppk" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
