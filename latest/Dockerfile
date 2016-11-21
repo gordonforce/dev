@@ -72,7 +72,8 @@ COPY sudoers /etc/sudoers
 # SDKMAN is written in bash and sh
 RUN chmod -R 755 /etc/sudoers
 
-RUN /usr/local/sdkman/install_sdkman_tools.sh
+RUN chmod -R 755 $SDKMAN_DIR/install_sdkman_tools.sh \
+	&& $SDKMAN_DIR/install_sdkman_tools.sh
 
 ENTRYPOINT /bin/bash -c "/bin/bash"
 
