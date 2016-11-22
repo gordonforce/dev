@@ -22,10 +22,8 @@ ENV DEBIAN_FRONTEND	noninteractive
 # a user has sudoer access by adding them to the  sudoer group
 #
 RUN apt-get update -qq \
-    && apt-get install -yqq --no-install-recommends \
+    && apt-get install -yqq -q --no-install-recommends \
         apt-utils \
-        avahi-daemon \
-        avahi-utils \
         bridge-utils \
         build-essential \
         debconf-utils \
@@ -77,6 +75,3 @@ COPY docker-entrypoint.sh docker-entrypoint.sh
 COPY sudoers /etc/sudoers
 
 RUN chmod -R 700 /etc/sudoers
-
-ENTRYPOINT /bin/bash -c "/bin/bash"
-

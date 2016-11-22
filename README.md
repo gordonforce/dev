@@ -14,13 +14,13 @@ Here is how to build the latest image and use it.
 to browse around in a `bash` shell as root
 
 ```powershell
-  docker run -it --rm gordonff/dev
+  docker run -it --rm gordonff/dev /bin/bash
 ```
 
-to mounting a host's directory as a data volume in a container
+to mounting a host's directory as a data volume in a container and list the directories contents.
  
 ```powershell
-  docker run --rm -it -v /c/tmp:/data gordonff/dev:latest
+  docker run --rm -it -v /c/tmp:/data gordonff/dev:latest /bin/bash -c "ls /data/.* /data/*"
 ```
 
 #### tag: user or how to use the latest tag   
