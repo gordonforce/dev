@@ -73,7 +73,7 @@ RUN chmod -R 755 $SDKMAN_DIR/install_sdkman_tools.sh \
 
 COPY sudoers /etc/sudoers
 
-RUN chmod -R 755 /etc/sudoers
+RUN chmod -R 700 /etc/sudoers
 
 ENTRYPOINT /bin/bash -c "/bin/bash"
 
