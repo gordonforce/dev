@@ -60,16 +60,19 @@ RUN  bash -c "export SDKMAN_DIR='/usr/local/sdkman' && curl -s get.sdkman.io | b
 
 WORKDIR $SDKMAN_DIR
 
-COPY config $SDKMAN_DIR/etc/config
+COPY config etc/config
 
-COPY docker-entrypoint.sh $SDKMAN_DIR/docker-entrypoint.sh
+RUN bash -c "source /usr/local/sdkman/bin/sdkman-init.sh \
+ && sdk install scala \
+ && sdk install sbt \
+ && sdk install maven \
+ && sdk install ant \
+ && sdk install activator \
+ && sdk flush candidates \
+ && sdk flush archives \
+ && sdk flush temp"
 
-COPY install_sdkman_tools.sh $SDKMAN_DIR/install_sdkman_tools.sh
-
-# Use a separate script here as the entry point must be sourced plus as
-# SDKMAN is written in bash and sh
-RUN chmod -R 755 $SDKMAN_DIR/install_sdkman_tools.sh \
-	&& $SDKMAN_DIR/install_sdkman_tools.sh
+COPY docker-entrypoint.sh docker-entrypoint.sh
 
 COPY sudoers /etc/sudoers
 
