@@ -42,13 +42,6 @@ if __name__ == "__main__":
             allow_abbrev=True)
 
     parser.add_argument(
-            '--verbose',
-            dest='verbose',
-            action='store_true',
-            default=False,
-            help='display the name of the container before deleting it')
-
-    parser.add_argument(
             '--rebuild',
             dest='rebuild',
             action='store_true',

@@ -66,14 +66,14 @@ COPY docker-entrypoint.sh $SDKMAN_DIR/docker-entrypoint.sh
 
 COPY install_sdkman_tools.sh $SDKMAN_DIR/install_sdkman_tools.sh
 
-COPY sudoers /etc/sudoers
-
 # Use a separate script here as the entry point must be sourced plus as
 # SDKMAN is written in bash and sh
-RUN chmod -R 755 /etc/sudoers
-
 RUN chmod -R 755 $SDKMAN_DIR/install_sdkman_tools.sh \
 	&& $SDKMAN_DIR/install_sdkman_tools.sh
+
+COPY sudoers /etc/sudoers
+
+RUN chmod -R 755 /etc/sudoers
 
 ENTRYPOINT /bin/bash -c "/bin/bash"
 
