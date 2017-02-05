@@ -28,8 +28,6 @@ fabric.properties
 
 
 # non-docker project files
-sudoers
 .gitignore
-config
 LICENSE
 README.md

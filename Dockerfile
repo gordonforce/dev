@@ -58,7 +58,7 @@ RUN apt-get update -qq \
   && chmod a+rwx /etc/sudoers \
   && rm -rf /etc/sudoers
 
-COPY ./sudoers /etc/sudoers
+COPY sudoers /etc/sudoers
 
 # the chmod command locks down the sudoers file so the sudo commmand will work.
 # membership in the staff allows one to execute sdkman installed commands
