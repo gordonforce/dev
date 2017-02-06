@@ -3,6 +3,8 @@
 #### tags
 
 - v2.0 latest user: [Dockerfile](https://github.com/gordonforce/dev/blob/latest/Dockerfile)
+[![](https://images.microbadger.com/badges/image/gordonff/dev.svg)](https://microbadger.com/images/gordonff/dev "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/gordonff/dev.svg)](https://microbadger.com/images/gordonff/dev "Get your own version badge on microbadger.com")
 - v1.0 [Dockerfile](https://github.com/gordonforce/dev/blob/v1.0/Dockerfile)
 
 ##### Version 2.0 Release Notes
